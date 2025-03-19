@@ -1,4 +1,11 @@
 :root {
     font-family: 'Work Sans';
     box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
 }

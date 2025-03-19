@@ -1,0 +1,270 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(237, 235, 235);
+    width: 100%;
+    max-width: 393px;
+    max-width: 1200px;
+    /* border-radius: 24px; */
+}
+
+/* HERO */
+
+.heroImg {
+    background-image: url(src/assets/heroHogsbohojd.jpeg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 78%;
+    /* border-radius: 24px 24px 0 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.clock {
+    font-size: 17px;
+    padding: 0 1.2rem;
+}
+
+.blackBox {
+    width: 125px;
+    height: 37px;
+    background-color: black;
+    border-radius: 100px;
+    margin: 8px;
+}
+
+.iphoneIconsWrapper {
+    display: flex;
+    gap: 0.3rem;
+    padding: 0 0.5rem;
+}
+
+.stc {
+    font-style: italic;
+    font-size: 30px;
+    margin: 0;
+}
+
+.arrowLeft {
+    width: 1.5rem;
+    margin: 0 0 0 0.5rem;
+}
+
+.insideHeroWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.hamburgerWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-right: 0.9rem;
+}
+
+.hamburgerMenu {
+    width: 24px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.h1Box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.h1 {
+    font-size: 3.5rem;
+    margin: 1.66rem;
+    text-align: left;
+}
+
+.addressWrapper {
+    align-items: left;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.address {
+    margin: 0 1.66rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* CARDS */
+
+.containerWeekdays {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    max-width: 800px;
+}
+
+.upcoming {
+    color: #4e4e4e;
+    font-weight: bold;
+    margin: 2rem 0 1rem 1rem;
+}
+
+.weekdayToday {
+    margin: 0 0 0 1rem;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.weekDay {
+    color: black;
+    font-size: 2.5rem;
+    align-self: flex-start;
+    margin: 1.5rem 0 0 1rem;
+}
+
+.cardGym {
+    width: 345px;
+    height: 136px;
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+    padding: 0 0 0 1rem;
+}
+
+.cardGymPlaces {
+    font-weight: bold;
+    font-size: 1.14rem;
+    align-self: start;
+    color: #3CBFAE;
+    margin: 2.5rem 0 0 0 ;
+}
+
+
+.h2 {
+    font-size: 1.6rem;
+    align-self: flex-start;
+    color: black;
+    margin: 0.2rem 0;
+}
+
+.cardGymTextBox {
+    display: flex;
+    gap: 1.4rem;
+    margin: 0;
+}
+
+.cardGymInstructur, .cardGymClock {
+    color: black;
+    margin: 0.2rem 0 1rem 0;
+    font-size: 0.875rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 350px) {
+    .cardGym {
+        width: 90%;
+        height: 100px;
+    }
+    .h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 450px) {
+    .containerWeekdays {
+        align-items: center;
+    }
+
+    .weekDay, .weekdayToday {
+        text-align: center;
+        width: 100%;
+        margin: 1.5rem 0 0;
+    }
+
+    .containerGymCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .cardGym {
+        max-width: 345px;
+    }
+}
+
+@media (min-width: 600px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .heroImg {
+        height: 500px;
+    }
+
+    .clock, .blackBox, .iphoneIconsWrapper {
+        display: none;
+    }
+
+    .insideHeroWrapper {
+        margin-top: 3rem;
+    }
+
+    .cardGym {
+        width: 80%;
+    }
+}
+
+@media (min-width: 800px) {
+    .wrapper {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .cardGym {
+        width: 345px;
+    }
+
+    .h1Box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .h1 {
+        font-size: 4.5rem;
+        margin: 24px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}

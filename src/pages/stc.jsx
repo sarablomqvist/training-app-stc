@@ -3,6 +3,7 @@ import styles from './stc.module.css'
 import classNames from 'classnames'
 import StcLog from '../components/stcLog'
 import IphoneIcons from '../components/iphoneIcons'
+import { Link } from 'react-router-dom'
 
 function Stc() {
     return (
@@ -33,11 +34,11 @@ function Stc() {
                     </div>
                 </div>
                 <div className={styles.h1Box}>
-                    <h1>Our gyms</h1>
+                    <h1 className={styles.h1}>Our gyms</h1>
                 </div>
             </div>
             <div className={styles.cardGym}>
-                <h2>Almedal</h2>
+                <h2 className={styles.h2}>Almedal</h2>
                 <img
                     src="src/assets/arrow-right-direction-white-icon.png"
                     className={styles.arrow}
@@ -45,7 +46,7 @@ function Stc() {
                 />
             </div>
             <div className={styles.cardGym}>
-                <h2>Backa entré</h2>
+                <h2 className={styles.h2}>Backa entré</h2>
                 <img
                     src="src/assets/arrow-right-direction-white-icon.png"
                     className={styles.arrow}
@@ -53,7 +54,7 @@ function Stc() {
                 />
             </div>
             <div className={styles.cardGym}>
-                <h2>Björkekärr</h2>
+                <h2 className={styles.h2}>Björkekärr</h2>
                 <img
                     src="src/assets/arrow-right-direction-white-icon.png"
                     className={styles.arrow}
@@ -61,21 +62,22 @@ function Stc() {
                 />
             </div>
             <div className={styles.cardGym}>
-                <h2 className={styles.flexBox}>Göteborg Eriksberg</h2>
+                <h2 className={styles.h2}>Göteborg Eriksberg</h2>
                 <img
                     src="src/assets/arrow-right-direction-white-icon.png"
                     className={styles.arrow}
                     alt="arrow to right"
                 />
             </div>
-            <div className={styles.cardGym}>
-                <h2>Göteborg Högsbohöjd</h2>
+            <Link to="/hogsbohojd" className={styles.cardGym}>
+                <h2 className={styles.h2}>Göteborg Högsbohöjd</h2>
+
                 <img
                     src="src/assets/arrow-right-direction-white-icon.png"
                     className={styles.arrow}
                     alt="arrow to right"
                 />
-            </div>
+            </Link>
         </div>
     )
 }
