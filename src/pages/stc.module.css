@@ -7,13 +7,18 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: rgb(237, 235, 235);
-    width: 393px;
+    width: 100%;
+    max-width: 393px;
+    max-width: 1200px;
     border-radius: 24px;
 }
 
+/* HERO */
+
 .heroImg {
     background-image: url(src/assets/hero.jpeg);
-    width: 393px;
+    width: 100%;
+    /* max-width: 393px; */
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,23 +29,29 @@ body {
     justify-content: space-between;
 }
 
+.clock {
+    font-size: 17px;
+    padding: 0 1.2rem;
+}
+
+.blackBox {
+    width: 125px;
+    height: 37px;
+    background-color: black;
+    border-radius: 100px;
+    margin: 8px;
+}
+
+.iphoneIconsWrapper {
+    display: flex;
+    gap: 0.3rem;
+    padding: 0 0.5rem;
+}
+
 .stc {
     font-style: italic;
     font-size: 30px;
     margin: 0;
-}
-
-.hamburgerWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.hamburgerMenu {
-    width: 24px;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 2px;
 }
 
 .insideHeroWrapper {
@@ -48,6 +59,20 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+}
+
+.hamburgerWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-right: 0.9rem;
+}
+
+.hamburgerMenu {
+    width: 24px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 2px;
 }
 
 .hidden {
@@ -60,7 +85,7 @@ body {
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 3.5rem;
     margin: 24px;
 }
 
@@ -70,22 +95,7 @@ h1 {
     align-items: center;
 }
 
-.battery {
-    width: 27.4px;
-}
-
-.clock {
-    margin-left: 10px;
-    font-size: 17px;
-}
-
-.blackBox {
-    width: 125px;
-    height: 37px;
-    background-color: black;
-    border-radius: 100px;
-    margin: 8px;
-}
+/* CARDS */
 
 .cardGym {
     width: 345px;
@@ -99,7 +109,7 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     align-self: flex-end;
     margin: 0 0 12px 20px;
 }
@@ -109,4 +119,53 @@ h2 {
     height: 24px;
     align-self: flex-end;
     margin: 0 20px 12px 0;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 600px) {
+    .wrapper {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .heroImg {
+        height: 500px;
+    }
+
+    .clock, .blackBox, .iphoneIconsWrapper {
+        display: none;
+    }
+
+    .insideHeroWrapper {
+        margin-top: 3rem;
+    }
+
+    .cardGym {
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        width: 90%;
+        gap: 1rem;
+    }
+
+    .cardGym {
+        width: 345px;
+    }
+
+    .h1Box {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        margin: 24px;
+    }
 }
