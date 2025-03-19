@@ -4,6 +4,7 @@ import IphoneIcons from '../components/iphoneIcons'
 import StcLog from '../components/stcLog'
 import classNames from 'classnames'
 import { Link } from 'react-router-dom'
+import Arrow from '../components/arrow'
 
 function GothenburgHogsbohojd() {
     return (
@@ -22,12 +23,8 @@ function GothenburgHogsbohojd() {
                         </div>
                         <div className={styles.insideHeroWrapper}>
                             <div className={styles.hamburgerWrapper}>
-                                <Link to="/">
-                                    <img
-                                        className={styles.arrowLeft}
-                                        src="src/assets/arrow-left-direction-white-icon.png"
-                                        alt="arrow left"
-                                    />
+                                <Link to="/" className={styles.arrowLeft}>
+                                    <Arrow />
                                 </Link>
                                 <div className={classNames(styles.hamburgerMenu, styles.hidden)}></div>
                                 <div className={classNames(styles.hamburgerMenu, styles.hidden)}></div>
@@ -49,18 +46,14 @@ function GothenburgHogsbohojd() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.containerGymCard}>
-                    <div className={styles.containerWeekdays}>
-                        <p className={styles.upcoming}>Upcoming sessions</p>
-                        <h2 className={classNames(styles.weekdayToday, styles.weekDay)}>Today</h2>
-                    </div>
-                    <div className={styles.cardGym}>
-                        <p className={styles.cardGymPlaces}>14 places remain</p>
-                        <h2 className={styles.h2}>Bodypump 45min</h2>
-                        <div className={styles.cardGymTextBox}>
-                            <p className={styles.cardGymClock}>17:30</p>
-                            <p className={styles.cardGymInstructur}>Marina Kristofferson</p>
-                        </div>
+                <p className={styles.upcoming}>Upcoming sessions</p>
+                <h2 className={styles.weekDay}>Today</h2>
+                <div className={styles.cardGym}>
+                    <p className={styles.cardGymPlaces}>14 places remain</p>
+                    <h2 className={styles.h2}>Bodypump 45min</h2>
+                    <div className={styles.cardGymTextBox}>
+                        <p className={styles.cardGymClock}>17:30</p>
+                        <p className={styles.cardGymInstructur}>Marina Kristofferson</p>
                     </div>
                 </div>
                 <div className={styles.cardGym}>

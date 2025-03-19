@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import StcLog from '../components/stcLog'
 import IphoneIcons from '../components/iphoneIcons'
 import { Link } from 'react-router-dom'
+import Arrow from '../components/arrow'
 
 function Stc() {
     return (
@@ -39,44 +40,33 @@ function Stc() {
             </div>
             <div className={styles.cardGym}>
                 <h2 className={styles.h2}>Almedal</h2>
-                <img
-                    src="src/assets/arrow-right-direction-white-icon.png"
-                    className={styles.arrow}
-                    alt="arrow to right"
-                />
+                <div className={styles.arrow}>
+                    <Arrow />
+                </div>
             </div>
             <div className={styles.cardGym}>
                 <h2 className={styles.h2}>Backa entré</h2>
-                <img
-                    src="src/assets/arrow-right-direction-white-icon.png"
-                    className={styles.arrow}
-                    alt="arrow to right"
-                />
+                <div className={styles.arrow}>
+                    <Arrow />
+                </div>
             </div>
             <div className={styles.cardGym}>
                 <h2 className={styles.h2}>Björkekärr</h2>
-                <img
-                    src="src/assets/arrow-right-direction-white-icon.png"
-                    className={styles.arrow}
-                    alt="arrow to right"
-                />
+                <div className={styles.arrow}>
+                    <Arrow />
+                </div>
             </div>
             <div className={styles.cardGym}>
                 <h2 className={styles.h2}>Göteborg Eriksberg</h2>
-                <img
-                    src="src/assets/arrow-right-direction-white-icon.png"
-                    className={styles.arrow}
-                    alt="arrow to right"
-                />
+                <div className={styles.arrow}>
+                    <Arrow />
+                </div>
             </div>
             <Link to="/hogsbohojd" className={styles.cardGym}>
                 <h2 className={styles.h2}>Göteborg Högsbohöjd</h2>
-
-                <img
-                    src="src/assets/arrow-right-direction-white-icon.png"
-                    className={styles.arrow}
-                    alt="arrow to right"
-                />
+                <div className={styles.arrow}>
+                    <Arrow />
+                </div>
             </Link>
         </div>
     )
