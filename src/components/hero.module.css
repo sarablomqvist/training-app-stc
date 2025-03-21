@@ -168,3 +168,9 @@
     }
 
 }
+
+@media (min-width: 1200px) {
+    .heroImg {
+        background-position: center 50%;
+    }
+}
