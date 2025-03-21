@@ -40,6 +40,7 @@ function GymActivityPage() {
             <div className={styles.wrapper}>
                 <Hero name={businessUnit?.name} address={businessUnit?.address?.street} postCode={businessUnit?.address?.postalCode}/>
                 <p className={styles.upcoming}>Upcoming sessions</p>
+                <h2 className={styles.weekDay}>Today</h2>
 
                 {activities.map((activity) => (
                     <div key={activity.id} className={styles.cardGym}>

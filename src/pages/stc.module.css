@@ -120,6 +120,15 @@
 
 /* MEDIA QUERIES */
 
+@media (max-width: 350px) {
+    .cardGym {
+        width: 90%;
+        height: 100px;
+    }
+    .h1 {
+        font-size: 2rem;
+    }
+
 @media (min-width: 600px) {
     .wrapper {
         width: 100%;
@@ -167,12 +176,4 @@
     }
 }
 
-@media (max-width: 350px) {
-    .cardGym {
-        width: 90%;
-        height: 100px;
-    }
-    .h1 {
-        font-size: 2rem;
-    }
 }

@@ -163,4 +163,9 @@
         font-size: 4.5rem;
         margin: 24px;
     }
+
+    .heroImg {
+        background-position: center 60%;
+    }
+
 }
