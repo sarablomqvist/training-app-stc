@@ -10,7 +10,7 @@
 /* HERO */
 
 .heroImg {
-    background-image: url(src/assets/hero.jpeg);
+    background-image: url(/src/assets/hero.jpeg);
     width: 100%;
     height: 400px;
     background-size: cover;
@@ -107,6 +107,7 @@
     align-self: flex-end;
     margin: 0 0 12px 20px;
     color: white;
+    text-align: left;
 }
 
 .arrow {

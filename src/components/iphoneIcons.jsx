@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './iphoneIcons.module.css'
 
 function IphoneIcons() {
     return (
-        <div>
+        <div className={styles.iphoneIconsWrapper}>
             <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M10.7994 3C10.7994 2.44772 11.2471 2 11.7994 2H12.7994C13.3517 2 13.7994 2.44772 13.7994 3V11C13.7994 11.5523 13.3517 12 12.7994 12H11.7994C11.2471 12 10.7994 11.5523 10.7994 11V3Z"

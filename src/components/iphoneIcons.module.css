@@ -1,0 +1,5 @@
+.iphoneIconsWrapper {
+    display: flex;
+    gap: 0.3rem;
+    padding: 0 0.5rem;
+}

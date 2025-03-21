@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './stc.module.css'
 import classNames from 'classnames'
 import StcLog from '../components/stcLog'
@@ -7,6 +7,18 @@ import { Link } from 'react-router-dom'
 import Arrow from '../components/arrow'
 
 function Stc() {
+    const [gyms, setGyms] = useState([])
+
+    useEffect(() => {
+        const fetchGyms = async () => {
+            const response = await fetch('https://stc.brpsystems.com/brponline/api/ver3/businessunits')
+            const data = await response.json()
+            setGyms(data)
+        }
+
+        fetchGyms()
+    }, [])
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.heroImg}>
@@ -25,9 +37,9 @@ function Stc() {
                             <div className={classNames(styles.hamburgerMenu, styles.hidden)}></div>
                             <div className={classNames(styles.hamburgerMenu, styles.hidden)}></div>
                         </div>
-                        <p className={styles.stc}>
+                        <div className={styles.stc}>
                             <StcLog />
-                        </p>
+                        </div>
                         <div className={styles.hamburgerWrapper}>
                             <div className={styles.hamburgerMenu}></div>
                             <div className={styles.hamburgerMenu}></div>
@@ -38,36 +50,15 @@ function Stc() {
                     <h1 className={styles.h1}>Our gyms</h1>
                 </div>
             </div>
-            <div className={styles.cardGym}>
-                <h2 className={styles.h2}>Almedal</h2>
-                <div className={styles.arrow}>
-                    <Arrow />
-                </div>
-            </div>
-            <div className={styles.cardGym}>
-                <h2 className={styles.h2}>Backa entré</h2>
-                <div className={styles.arrow}>
-                    <Arrow />
-                </div>
-            </div>
-            <div className={styles.cardGym}>
-                <h2 className={styles.h2}>Björkekärr</h2>
-                <div className={styles.arrow}>
-                    <Arrow />
-                </div>
-            </div>
-            <div className={styles.cardGym}>
-                <h2 className={styles.h2}>Göteborg Eriksberg</h2>
-                <div className={styles.arrow}>
-                    <Arrow />
-                </div>
-            </div>
-            <Link to="/hogsbohojd" className={styles.cardGym}>
-                <h2 className={styles.h2}>Göteborg Högsbohöjd</h2>
-                <div className={styles.arrow}>
-                    <Arrow />
-                </div>
-            </Link>
+
+            {gyms.map((gym) => (
+                <Link key={gym.id} to={`/gym/${gym.id}`} className={styles.cardGym}>
+                    <h2 className={styles.h2}>{gym.name}</h2>
+                    <div className={styles.arrow}>
+                        <Arrow />
+                    </div>
+                </Link>
+            ))}
         </div>
     )
 }
